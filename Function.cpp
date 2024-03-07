@@ -19,7 +19,6 @@ double Function::get_f() {
 }
 
 
-//Функция Бута
 Function1::Function1() : Function(2) {}
 
 double Function1::calculate(std::vector<double> x_) {
@@ -29,24 +28,23 @@ double Function1::calculate(std::vector<double> x_) {
     return f;
 }
 
-//Функция Розенброка
 Function2::Function2() : Function(3) {}
 
 double Function2::calculate(std::vector<double> x_) {
     x = x_;
-    f = 100 * (x[1] - x[0] * x[0]) * (x[1] - x[0] * x[0]) + (x[0] - 1) * (x[0] - 1) +
-        100 * (x[2] - x[1] * x[1]) * (x[2] - x[1] * x[1]) + (x[1] - 1) * (x[1] - 1);
+    f = x[0] * x[0] + x[1] * x[1] + (1 - x[2]) * (1 - x[2]) + x[0] * x[1];
     return f;
 }
 
-//Функция Билла
-Function3::Function3() : Function(2) {}
+
+Function3::Function3() : Function(4) {}
 
 double Function3::calculate(std::vector<double> x_) {
     x = x_;
-    f = (1.5 - x[0] + x[0] * x[1]) * (1.5 - x[0] + x[0] * x[1]) + (2.25 - x[0] + x[0] * x[1] * x[1]) *
-        (2.25 - x[0] + x[0] * x[1] * x[1]) + (2.625 - x[0] + x[0] * x[1] * x[1] * x[1]) *
-        (2.625 - x[0] + x[0] * x[1] * x[1] * x[1]);
+    f = 0;
+    for (int i = 0; i < dim - 1; ++i) {
+        f += 100 * (x[i + 1] - x[i] * x[i]) * (x[i + 1] - x[i] * x[i]) + (x[i] - 1) * (x[i] - 1);
+    }
     return f;
 }
 
