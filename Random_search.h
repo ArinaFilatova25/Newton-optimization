@@ -21,9 +21,9 @@ private:
     double alpha;
 
 public:
-    Random_search() = default;
+    Random_search();
     Random_search(Function* function, std::vector<double> x_0, Area area,
-        Stop_criterion* stop_criterion, double p_ = 0.5, double delta_ = -1, double alpha_ = 1);
+        Stop_criterion* stop_criterion, double p_ = 0.5, double delta_ = 1, double alpha_ = 1);
 
     void optimization() override;
 };
