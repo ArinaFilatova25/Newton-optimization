@@ -24,15 +24,15 @@ Criterion_f_difference_min::Criterion_f_difference_min(double eps_, int max_num_
     : Stop_criterion(eps_, max_num_of_iterations_) {}
 
 bool Criterion_f_difference_min::termination(Optimization_method* optimization_method) {
-    int num_iter = optimization_method->get_num_of_iter();;
-    if (num_iter == 0)
+    int num_iter = optimization_method->get_seq_f_i().size();
+    if (num_iter == 1)
         return false;
 
     if (num_iter >= max_num_of_iterations)
         return true;
 
-    double curr_f = optimization_method->get_seq_f_i()[num_iter],
-           prev_f = optimization_method->get_seq_f_i()[num_iter - 1];
+    double curr_f = optimization_method->get_seq_f_i()[num_iter - 1],
+           prev_f = optimization_method->get_seq_f_i()[num_iter - 2];
     return (std::abs(curr_f - prev_f )< eps);
 }
 
@@ -79,19 +79,19 @@ Criterion_x_difference::Criterion_x_difference(double eps_, int max_num_of_itera
     : Stop_criterion(eps_, max_num_of_iterations_) {}
 
 bool Criterion_x_difference::termination(Optimization_method* optimization_method) {
-    int num_iter = optimization_method->get_num_of_iter();
-    if (num_iter == 0)
-        return false;
 
     std::vector<std::vector<double>> seq_x_i = optimization_method->get_seq_x_i();
     int size = seq_x_i.size();
- 
-    if (num_iter >= max_num_of_iterations)
+
+    if (size == 1)
+        return false;
+
+    if (optimization_method->get_num_of_iter() >= max_num_of_iterations)
         return true;
 
     int dim = optimization_method->get_function()->get_dim();
-
     std::vector<double> x1 = seq_x_i[size - 1], x2 = seq_x_i[size - 2];
+
     double x_sum_sq = 0;
     for (int i = 0; i < dim; ++i) {
         x1[i] -= x2[i];
@@ -106,14 +106,15 @@ Criterion_f_difference::Criterion_f_difference(double eps_, int max_num_of_itera
     : Stop_criterion(eps_, max_num_of_iterations_) {}
 
 bool Criterion_f_difference::termination(Optimization_method* optimization_method) {
-    int num_iter = optimization_method->get_num_of_iter();
-    if (num_iter == 0)
-        return false;
 
     std::vector<double> seq_f_i = optimization_method->get_seq_f_i();
     int size = seq_f_i.size();
 
-    if (num_iter >= max_num_of_iterations)
+    if (size == 1)
+        return false;
+
+    if (optimization_method->get_num_of_iter() >= max_num_of_iterations)
         return true;
-    return (std::abs((seq_f_i[size - 1] - seq_f_i[size - 2]) / (seq_f_i[size - 1])) < eps);
+
+    return (std::abs((seq_f_i[size - 1] - seq_f_i[size - 2]) / seq_f_i[size - 1]) < eps);
 }
