@@ -1,3 +1,6 @@
 [submodule "Newton-optimization"]
 	path = Newton-optimization
 	url = https://github.com/ArinaFilatova25/Newton-optimization
+[submodule "eigen"]
+	path = eigen
+	url = https://github.com/libigl/eigen
