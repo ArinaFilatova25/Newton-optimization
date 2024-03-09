@@ -43,11 +43,11 @@ int main() {
         std::cin >> function_nt;
 
         if (function_nt < 1 || function_nt > 3) {
-            std::cout << " Введено недопустимое значение. Необходимо ввести число от 1 до 3." << std::endl;
             throw std::invalid_argument("Введено недопустимое значение. Необходимо ввести число от 1 до 3.");
         }
     }
-    catch (...) {
+    catch (const std::exception& e) {
+        std::cout << " Введено недопустимое значение. Необходимо ввести число от 1 до 3." << std::endl;
         return -1;
     }
 
@@ -70,12 +70,12 @@ int main() {
             std::cout << " Ось " << i + 1 << ":" << std::endl;
             std::cin >> box[i].first >> box[i].second;
             if (box[i].first > x_0[i] || box[i].second < x_0[i]) {
-                std::cout << " Начальная точка не находится в области минимизации." << std::endl;
-                throw(-1);
+                throw std::invalid_argument("Начальная точка не находится в области минимизации.");
             }
         }
     }
-    catch (...) {
+    catch (const std::exception& e) {
+        std::cout << " Начальная точка не находится в области минимизации." << std::endl;
         return -1;
     }
 
@@ -121,12 +121,12 @@ int main() {
                         break;
                     default:
                         stop_criterion = nullptr;
-                        std::cout << " Введено недопустимое значение. Необходимо ввести число от 1 до 3." << std::endl;
                         throw std::invalid_argument("Введено недопустимое значение. Необходимо ввести число от 1 до 3.");
                         break;
                     }
                 }
-                catch (...) {
+                catch (const std::exception& e) {
+                    std::cout << " Введено недопустимое значение. Необходимо ввести число от 1 до 3." << std::endl;
                     return - 1;
                 }
 
@@ -140,11 +140,11 @@ int main() {
                     std::cin >> p >> delta >> alpha;
 
                     if (p < 0 || p > 1 || delta < 0 || delta > 1 || alpha < 0 || alpha > 1) {
-                        std::cout << "Один или несколько параметров не находятся в пределах (0;1)." << std::endl;
                         throw std::invalid_argument("Один или несколько параметров не находятся в пределах (0;1).");
                     }
                 }
-                catch (...) {
+                catch (const std::exception& e) {
+                    std::cout << "Один или несколько параметров не находятся в пределах (0;1)." << std::endl;
                     return -1; 
                 }
 
@@ -178,12 +178,12 @@ int main() {
                     default:
 
                         stop_criterion = nullptr;
-                        std::cout << " Введено недопустимое значение. Необходимо ввести число от 1 до 3." << std::endl;
                         throw std::invalid_argument("Введено недопустимое значение. Необходимо ввести число от 1 до 3.");
                         break;
                     }
                 }
-                catch (...) {
+                catch (const std::exception& e) {
+                    std::cout << " Введено недопустимое значение. Необходимо ввести число от 1 до 3." << std::endl;
                     return -1;
                 }
 
@@ -192,14 +192,12 @@ int main() {
 
 
             default:
-                std::cout << " Введено недопустимое значение. Необходимо ввести число 1 или 2." << std::endl;
                 throw std::invalid_argument("Введено недопустимое значение. Необходимо ввести 1 или 2.");
-                // stop_criterion = new Criterion_grad_f(eps);
-                 //optimization_method = new Newton_opt(function.get(), x_0, area, stop_criterion);
                 break;
             }
         }
-        catch (...) {
+        catch (const std::exception& e) {
+            std::cout << " Введено недопустимое значение. Необходимо ввести число 1 или 2." << std::endl;
             return -1;
         }
 

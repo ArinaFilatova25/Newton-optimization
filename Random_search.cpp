@@ -5,9 +5,8 @@ Random_search::Random_search() {}
 Random_search::Random_search(Function* function, std::vector<double> x_0, Area area,
     Stop_criterion* stop_criterion, double p_, double delta_, double alpha_)
     : Optimization_method(function, x_0, area, stop_criterion), p(p_), delta(delta_), curr_delta(delta_), alpha(alpha_),
-    seed(std::chrono::system_clock::now().time_since_epoch().count()), generator(seed), distribution(0, 1) {
-    std::vector<std::pair<double, double>> box = area.get_box();
-    int dim = function->get_dim();
+    seed(static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count())), generator(seed), distribution(0, 1) {
+  
 }
 
 void Random_search::optimization() {
