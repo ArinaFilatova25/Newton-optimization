@@ -1,0 +1,3 @@
+[submodule "Newton-optimization"]
+	path = Newton-optimization
+	url = https://github.com/ArinaFilatova25/Newton-optimization
