@@ -1,0 +1,89 @@
+\doxysection{Stop\+\_\+criterion.\+h}
+\hypertarget{_stop__criterion_8h_source}{}\label{_stop__criterion_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Function.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Area.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_optimization__method}{Optimization\_method}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_stop__criterion_a3d03c7799af8c3e1580efb8e8f035cc4}{eps}};\ \ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_stop__criterion_a82d6875ad3519c1f71b2f985b6e68eea}{max\_num\_of\_iterations}};\ \ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_stop__criterion_a2fffd40f0751e302229e3dd78436574c}{Stop\_criterion}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_stop__criterion_a237246e0a353dd7cacc07e7ba52edada}{\string~Stop\_criterion}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_stop__criterion_a2fffd40f0751e302229e3dd78436574c}{Stop\_criterion}}(\textcolor{keywordtype}{double}\ eps\_,\ \textcolor{keywordtype}{int}\ max\_num\_of\_iterations\_);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_stop__criterion_ae0c471c4b28e5dcfd90819b93b9f8386}{get\_eps}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_stop__criterion_abe3a38e90f8929640a9606fb2b107065}{get\_max\_num\_of\_iterations}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_stop__criterion_acdf1e34d4ef145bfc95ae38be9b33319}{termination}}(\mbox{\hyperlink{class_optimization__method}{Optimization\_method}}*\ optimization\_method)\ =\ 0;}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_criterion__f__difference__min}{Criterion\_f\_difference\_min}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}\ \{}
+\DoxyCodeLine{00063\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_criterion__f__difference__min_af7b4a4ff33b190ffad9459385431e253}{Criterion\_f\_difference\_min}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_criterion__f__difference__min_af7b4a4ff33b190ffad9459385431e253}{Criterion\_f\_difference\_min}}(\textcolor{keywordtype}{double}\ eps\_,\ \textcolor{keywordtype}{int}\ max\_num\_of\_iterations\_\ =\ 100);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_criterion__f__difference__min_a8e01c4196d72927362fdf9d2956b4aa3}{termination}}(\mbox{\hyperlink{class_optimization__method}{Optimization\_method}}*\ optimization\_method)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_criterion__max__iter}{Criterion\_max\_iter}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}\ \{}
+\DoxyCodeLine{00088\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{class_criterion__max__iter_a665905b0a5b239f32238f965c32ccab5}{Criterion\_max\_iter}}();}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_criterion__max__iter_a665905b0a5b239f32238f965c32ccab5}{Criterion\_max\_iter}}(\textcolor{keywordtype}{int}\ max\_num\_of\_iterations\_);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_criterion__max__iter_a8b409ad9deb40115a97812005ea7d52d}{termination}}(\mbox{\hyperlink{class_optimization__method}{Optimization\_method}}*\ optimization\_method)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_criterion__num__iter__last__approx}{Criterion\_num\_iter\_last\_approx}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}\ \{}
+\DoxyCodeLine{00112\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{class_criterion__num__iter__last__approx_a3304dc308458a60f906d61650aff1f8d}{Criterion\_num\_iter\_last\_approx}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_criterion__num__iter__last__approx_a3304dc308458a60f906d61650aff1f8d}{Criterion\_num\_iter\_last\_approx}}(\textcolor{keywordtype}{int}\ max\_num\_of\_iterations\_);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_criterion__num__iter__last__approx_a66dcb43119bad4f6cfff4d9688c347ea}{termination}}(\mbox{\hyperlink{class_optimization__method}{Optimization\_method}}*\ optimization\_method)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00130\ \};}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_criterion__grad__f}{Criterion\_grad\_f}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}\ \{}
+\DoxyCodeLine{00136\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{class_criterion__grad__f_af623e64a3cba114be0bf8f9d99e78dc9}{Criterion\_grad\_f}}();}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_criterion__grad__f_af623e64a3cba114be0bf8f9d99e78dc9}{Criterion\_grad\_f}}(\textcolor{keywordtype}{double}\ eps\_,\ \textcolor{keywordtype}{int}\ max\_num\_of\_iterations\_\ =\ 100);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_criterion__grad__f_a5c945a087e80f39b00eeb560b7916778}{termination}}(\mbox{\hyperlink{class_optimization__method}{Optimization\_method}}*\ optimization\_method)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00155\ \};}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00160\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_criterion__x__difference}{Criterion\_x\_difference}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}\ \{}
+\DoxyCodeLine{00161\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_criterion__x__difference_a036a723f069cb5c293b6d3cc834869c5}{Criterion\_x\_difference}}();}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_criterion__x__difference_a036a723f069cb5c293b6d3cc834869c5}{Criterion\_x\_difference}}(\textcolor{keywordtype}{double}\ eps\_,\ \textcolor{keywordtype}{int}\ max\_num\_of\_iterations\_\ =\ 100);}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_criterion__x__difference_a32f7b52b635bbccecc41032dfdb95322}{termination}}(\mbox{\hyperlink{class_optimization__method}{Optimization\_method}}*\ optimization\_method)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00180\ \};}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00185\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_criterion__f__difference}{Criterion\_f\_difference}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}\ \{}
+\DoxyCodeLine{00186\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00190\ \ \ \ \ \mbox{\hyperlink{class_criterion__f__difference_a2ab6b59797e1a7286b6ab07d51aaf107}{Criterion\_f\_difference}}();}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_criterion__f__difference_a2ab6b59797e1a7286b6ab07d51aaf107}{Criterion\_f\_difference}}(\textcolor{keywordtype}{double}\ eps\_,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_stop__criterion_a82d6875ad3519c1f71b2f985b6e68eea}{max\_num\_of\_iterations}}\ =\ 100);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_criterion__f__difference_a1f83a8963b08de1bb990df5bed8b4262}{termination}}(\mbox{\hyperlink{class_optimization__method}{Optimization\_method}}*\ optimization\_method)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00205\ \};}
+\DoxyCodeLine{00206\ }
+
+\end{DoxyCode}

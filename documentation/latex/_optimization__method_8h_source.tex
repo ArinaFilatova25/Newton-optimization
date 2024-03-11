@@ -1,0 +1,48 @@
+\doxysection{Optimization\+\_\+method.\+h}
+\hypertarget{_optimization__method_8h_source}{}\label{_optimization__method_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Function.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Stop\_criterion.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Area.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_optimization__method}{Optimization\_method}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00017\ \ \ \ \ std::vector<std::vector<double>>\ \mbox{\hyperlink{class_optimization__method_a705e6b23999b93af2fa0a3f95163a552}{seq\_x\_i}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_optimization__method_a3b09f36c6b9a5f3d37ec813fd120f995}{seq\_f\_i}};\ }
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_function}{Function}}*\ \mbox{\hyperlink{class_optimization__method_aa7a333dc2fadf8de070dad4c665f19fb}{function}};\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_area}{Area}}\ \mbox{\hyperlink{class_optimization__method_a822bb7b7bcd27fbc4062a57bb803f5e5}{area}};\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}*\ \mbox{\hyperlink{class_optimization__method_a10ac5d02c8ebe2e107eeb9ea7e576485}{stop\_criterion}};\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_optimization__method_a65e72601aafebf3c9b9d13dde4430f0b}{num\_of\_iter}};\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_optimization__method_a5a0bfc4d893389a7b71175e2ce274782}{num\_of\_iter\_since\_last\_approx}};\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_optimization__method_a7611f23ae202eea3cf2f5ee847b2bff5}{Optimization\_method}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_optimization__method_aadbcd7abdf3ce1b69f0736661e13ce37}{\string~Optimization\_method}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_optimization__method_a7611f23ae202eea3cf2f5ee847b2bff5}{Optimization\_method}}(\mbox{\hyperlink{class_function}{Function}}*\ func,\ std::vector<double>\ x\_0,\ \mbox{\hyperlink{class_area}{Area}}\ area\_,\ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}*\ stop\_crit\_);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<std::vector<double>>\ \mbox{\hyperlink{class_optimization__method_a8b288e16d4f3e0ca3ff172929ac116eb}{get\_seq\_x\_i}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_optimization__method_a4ca0faed2628529a559013cb0f367481}{get\_seq\_f\_i}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_function}{Function}}*\ \mbox{\hyperlink{class_optimization__method_ab89a51f7ecf22cd3fa13aaaaa63c318d}{get\_function}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_area}{Area}}\ \mbox{\hyperlink{class_optimization__method_ae411142149247df02cfcd4d4cf3a5eb6}{get\_area}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}*\ \mbox{\hyperlink{class_optimization__method_a37a458942dc22a723c2bcdc1a12440fc}{get\_stop\_criterion}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_optimization__method_a00dc9e0b6534ae3db6c55796592df35d}{get\_num\_of\_iter}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_optimization__method_a6dd4cdd2ef8aeedff5971c29875f56da}{get\_num\_of\_iter\_since\_last\_approx}}();}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_optimization__method_a6621cb98eedd4b5fdf043b90704e43f3}{optimization}}()\ =\ 0;}
+\DoxyCodeLine{00092\ \};}
+
+\end{DoxyCode}

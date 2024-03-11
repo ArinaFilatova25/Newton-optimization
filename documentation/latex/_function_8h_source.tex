@@ -1,0 +1,59 @@
+\doxysection{Function.\+h}
+\hypertarget{_function_8h_source}{}\label{_function_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Area.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_function}{Function}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_function_a4b8560408fbefc8a791b70f35959d3a1}{dim}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_function_ac44ab0274d3ef0009995a1022a22414c}{x}};\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_function_a36a0ad6c723b1b3db0bf0a68ed5076d6}{f}};\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_function_a3b03f7cf0b75d16edebdda1dee1db6fd}{\string~Function}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_function_ae206568fd4fd4c885e3ccff76345c4e6}{Function}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ dimension);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_function_aba9ea986a88e1a7058cbd0e51c599fef}{get\_dim}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_function_accc830b2dc21b5d470568358ee49cf81}{get\_x}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_function_a57947fdd35be9cc37268636db52a1887}{get\_f}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00061\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_function_aab6dd01b710f7a468c7cc0843c245ffa}{gradient}}(std::vector<double>\ x\_,\ \textcolor{keywordtype}{double}\ h,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_area}{Area}}\&\ a);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00070\ \ \ \ \ std::vector<std::vector<double>>\ \mbox{\hyperlink{class_function_a98b2990ddf2134794346f6107976f180}{hessian}}(std::vector<double>\ x\_,\ \textcolor{keywordtype}{double}\ h,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_area}{Area}}\&\ a);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_function_aa5c1807c1f76a63b16cd9be050ef6f21}{calculate}}(std::vector<double>\ \mbox{\hyperlink{class_function_ac44ab0274d3ef0009995a1022a22414c}{x}})\ =\ 0;}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_function1}{Function1}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_function}{Function}}\ \{}
+\DoxyCodeLine{00084\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_function1_a8851f26bd3a20ca8da70a6e6a6a95281}{Function1}}();}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_function1_a525d60bd67be0d6d2b857be05f4a320b}{calculate}}(std::vector<double>\ x\_)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00096\ \};}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00101\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_function2}{Function2}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_function}{Function}}\ \{}
+\DoxyCodeLine{00102\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{class_function2_a27b1cdb06f6599a183cc3463979ea238}{Function2}}();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_function2_aaa8a9a169c50b87d4d5e01e649a245cb}{calculate}}(std::vector<double>\ x\_)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00114\ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_function3}{Function3}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_function}{Function}}\ \{}
+\DoxyCodeLine{00120\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{class_function3_af173f03440f6fa2977d460bed29dc64e}{Function3}}();}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_function3_a5c730ade29c1d7413fe10b91f323edf6}{calculate}}(std::vector<double>\ x\_)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00132\ \};}
+
+\end{DoxyCode}

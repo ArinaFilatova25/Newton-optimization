@@ -1,0 +1,124 @@
+\doxysection{Random\+\_\+search Class Reference}
+\hypertarget{class_random__search}{}\label{class_random__search}\index{Random\_search@{Random\_search}}
+
+
+Random Search optimization method class.  
+
+
+
+
+{\ttfamily \#include $<$Random\+\_\+search.\+h$>$}
+
+Inheritance diagram for Random\+\_\+search\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_random__search}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_random__search_a8a050812851cf02b96da75f01f2964ec}\label{class_random__search_a8a050812851cf02b96da75f01f2964ec} 
+{\bfseries Random\+\_\+search} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for Random Search optimization method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_random__search_aa571392f3eaf15b0c0e33e2c34d4aee7}{Random\+\_\+search}} (\mbox{\hyperlink{class_function}{Function}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_optimization__method_aa7a333dc2fadf8de070dad4c665f19fb}{function}}, std\+::vector$<$ double $>$ x\+\_\+0, \mbox{\hyperlink{class_area}{Area}} \mbox{\hyperlink{class_optimization__method_a822bb7b7bcd27fbc4062a57bb803f5e5}{area}}, \mbox{\hyperlink{class_stop__criterion}{Stop\+\_\+criterion}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_optimization__method_a10ac5d02c8ebe2e107eeb9ea7e576485}{stop\+\_\+criterion}}, double p\+\_\+=0.\+5, double delta\+\_\+=1, double alpha\+\_\+=1)
+\begin{DoxyCompactList}\small\item\em Constructor for Random Search optimization method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_random__search_af015d9b8a41463dedbc6d6c79cd30f1b}{optimization}} () override
+\begin{DoxyCompactList}\small\item\em Perform the Random Search optimization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_optimization__method}{Optimization\+\_\+method}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Optimization\+\_\+method} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Optimization\+\_\+method} ()
+\begin{DoxyCompactList}\small\item\em Destructor for optimization method. Deletes the function and stop criterion objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_optimization__method_aaffa8719db4ee201d7bcf0cddf018d83}{Optimization\+\_\+method}} (\mbox{\hyperlink{class_function}{Function}} \texorpdfstring{$\ast$}{*}func, std\+::vector$<$ double $>$ x\+\_\+0, \mbox{\hyperlink{class_area}{Area}} area\+\_\+, \mbox{\hyperlink{class_stop__criterion}{Stop\+\_\+criterion}} \texorpdfstring{$\ast$}{*}stop\+\_\+crit\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor initializing the optimization method. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_optimization__method_a8b288e16d4f3e0ca3ff172929ac116eb}{get\+\_\+seq\+\_\+x\+\_\+i}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the sequence of iterates during optimization. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_optimization__method_a4ca0faed2628529a559013cb0f367481}{get\+\_\+seq\+\_\+f\+\_\+i}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the sequence of function values during optimization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_function}{Function}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optimization__method_ab89a51f7ecf22cd3fa13aaaaa63c318d}{get\+\_\+function}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the pointer to the objective function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_area}{Area}} \mbox{\hyperlink{class_optimization__method_ae411142149247df02cfcd4d4cf3a5eb6}{get\+\_\+area}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the area constraint for optimization. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stop__criterion}{Stop\+\_\+criterion}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optimization__method_a37a458942dc22a723c2bcdc1a12440fc}{get\+\_\+stop\+\_\+criterion}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the pointer to the stopping criterion. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_optimization__method_a00dc9e0b6534ae3db6c55796592df35d}{get\+\_\+num\+\_\+of\+\_\+iter}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the total number of iterations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_optimization__method_a6dd4cdd2ef8aeedff5971c29875f56da}{get\+\_\+num\+\_\+of\+\_\+iter\+\_\+since\+\_\+last\+\_\+approx}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the number of iterations since the last approximation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_optimization__method}{Optimization\+\_\+method}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_optimization__method_a705e6b23999b93af2fa0a3f95163a552}{seq\+\_\+x\+\_\+i}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_optimization__method_a3b09f36c6b9a5f3d37ec813fd120f995}{seq\+\_\+f\+\_\+i}}
+\item 
+\mbox{\hyperlink{class_function}{Function}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optimization__method_aa7a333dc2fadf8de070dad4c665f19fb}{function}}
+\item 
+\mbox{\hyperlink{class_area}{Area}} \mbox{\hyperlink{class_optimization__method_a822bb7b7bcd27fbc4062a57bb803f5e5}{area}}
+\item 
+\mbox{\hyperlink{class_stop__criterion}{Stop\+\_\+criterion}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_optimization__method_a10ac5d02c8ebe2e107eeb9ea7e576485}{stop\+\_\+criterion}}
+\item 
+int \mbox{\hyperlink{class_optimization__method_a65e72601aafebf3c9b9d13dde4430f0b}{num\+\_\+of\+\_\+iter}}
+\item 
+int \mbox{\hyperlink{class_optimization__method_a5a0bfc4d893389a7b71175e2ce274782}{num\+\_\+of\+\_\+iter\+\_\+since\+\_\+last\+\_\+approx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Random Search optimization method class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_random__search_aa571392f3eaf15b0c0e33e2c34d4aee7}\label{class_random__search_aa571392f3eaf15b0c0e33e2c34d4aee7} 
+\index{Random\_search@{Random\_search}!Random\_search@{Random\_search}}
+\index{Random\_search@{Random\_search}!Random\_search@{Random\_search}}
+\doxysubsubsection{\texorpdfstring{Random\_search()}{Random\_search()}}
+{\footnotesize\ttfamily Random\+\_\+search\+::\+Random\+\_\+search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_function}{Function}} \texorpdfstring{$\ast$}{*}}]{function,  }\item[{std\+::vector$<$ double $>$}]{x\+\_\+0,  }\item[{\mbox{\hyperlink{class_area}{Area}}}]{area,  }\item[{\mbox{\hyperlink{class_stop__criterion}{Stop\+\_\+criterion}} \texorpdfstring{$\ast$}{*}}]{stop\+\_\+criterion,  }\item[{double}]{p\+\_\+ = {\ttfamily 0.5},  }\item[{double}]{delta\+\_\+ = {\ttfamily 1},  }\item[{double}]{alpha\+\_\+ = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Constructor for Random Search optimization method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & Pointer to the objective function. \\
+\hline
+{\em x\+\_\+0} & Initial point for optimization. \\
+\hline
+{\em area} & \doxylink{class_area}{Area} constraint for optimization. \\
+\hline
+{\em stop\+\_\+criterion} & Pointer to the stopping criterion. \\
+\hline
+{\em p\+\_\+} & Probability parameter for determining the search strategy. \\
+\hline
+{\em delta\+\_\+} & Initial radius neighborhood of a point. \\
+\hline
+{\em alpha\+\_\+} & Coefficient that diminishes the size of the delta neighborhood around a given point. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_random__search_af015d9b8a41463dedbc6d6c79cd30f1b}\label{class_random__search_af015d9b8a41463dedbc6d6c79cd30f1b} 
+\index{Random\_search@{Random\_search}!optimization@{optimization}}
+\index{optimization@{optimization}!Random\_search@{Random\_search}}
+\doxysubsubsection{\texorpdfstring{optimization()}{optimization()}}
+{\footnotesize\ttfamily void Random\+\_\+search\+::optimization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Perform the Random Search optimization. 
+
+
+
+Implements \mbox{\hyperlink{class_optimization__method_a6621cb98eedd4b5fdf043b90704e43f3}{Optimization\+\_\+method}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Random\+\_\+search.\+h\item 
+Random\+\_\+search.\+cpp\end{DoxyCompactItemize}

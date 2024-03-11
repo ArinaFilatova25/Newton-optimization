@@ -1,0 +1,88 @@
+\doxysection{Function1 Class Reference}
+\hypertarget{class_function1}{}\label{class_function1}\index{Function1@{Function1}}
+
+
+Derived class representing the first function\+: Booth \doxylink{class_function}{Function}.  
+
+
+
+
+{\ttfamily \#include $<$Function.\+h$>$}
+
+Inheritance diagram for Function1\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_function1}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_function1_a8851f26bd3a20ca8da70a6e6a6a95281}\label{class_function1_a8851f26bd3a20ca8da70a6e6a6a95281} 
+{\bfseries Function1} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing the function with dimension 2. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_function1_a525d60bd67be0d6d2b857be05f4a320b}{calculate}} (std\+::vector$<$ double $>$ x\+\_\+) override
+\begin{DoxyCompactList}\small\item\em Calculates the function value for the first function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_function}{Function}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Function} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Function} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic behavior. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_function_afef64c624872b2506690a32ad748d841}{Function}} (const int dimension)
+\begin{DoxyCompactList}\small\item\em Constructor initializing the function with a specified dimension. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_function_aba9ea986a88e1a7058cbd0e51c599fef}{get\+\_\+dim}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the dimension of the function. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_function_accc830b2dc21b5d470568358ee49cf81}{get\+\_\+x}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the input vector. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_function_a57947fdd35be9cc37268636db52a1887}{get\+\_\+f}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the function value. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_function_aab6dd01b710f7a468c7cc0843c245ffa}{gradient}} (std\+::vector$<$ double $>$ x\+\_\+, double h, const \mbox{\hyperlink{class_area}{Area}} \&a)
+\begin{DoxyCompactList}\small\item\em Calculates the gradient of the function at a given point. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \mbox{\hyperlink{class_function_a98b2990ddf2134794346f6107976f180}{hessian}} (std\+::vector$<$ double $>$ x\+\_\+, double h, const \mbox{\hyperlink{class_area}{Area}} \&a)
+\begin{DoxyCompactList}\small\item\em Calculates the Hessian matrix of the function at a given point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_function}{Function}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_function_a4b8560408fbefc8a791b70f35959d3a1}{dim}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_function_ac44ab0274d3ef0009995a1022a22414c}{x}}
+\item 
+double \mbox{\hyperlink{class_function_a36a0ad6c723b1b3db0bf0a68ed5076d6}{f}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Derived class representing the first function\+: Booth \doxylink{class_function}{Function}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_function1_a525d60bd67be0d6d2b857be05f4a320b}\label{class_function1_a525d60bd67be0d6d2b857be05f4a320b} 
+\index{Function1@{Function1}!calculate@{calculate}}
+\index{calculate@{calculate}!Function1@{Function1}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}}
+{\footnotesize\ttfamily double Function1\+::calculate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{x\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the function value for the first function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+} & Point at which the function is evaluated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Result of the function evaluation. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_function_aa5c1807c1f76a63b16cd9be050ef6f21}{Function}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Function.\+h\item 
+Function.\+cpp\end{DoxyCompactItemize}

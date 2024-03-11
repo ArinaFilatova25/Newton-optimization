@@ -1,0 +1,103 @@
+\doxysection{Area Class Reference}
+\hypertarget{class_area}{}\label{class_area}\index{Area@{Area}}
+
+
+Class representing an area defined by a bounding box.  
+
+
+
+
+{\ttfamily \#include $<$Area.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_area_aa92851fcffb0a9f1c6c8c283204f7003}\label{class_area_aa92851fcffb0a9f1c6c8c283204f7003} 
+{\bfseries Area} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_area_a75d49a2424fb49eb7ac71ca232f7f2e1}{Area}} (const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \&box\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor initializing the area with a specified bounding box. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \mbox{\hyperlink{class_area_afe3e87cd4c41bdb896b25bcfd5c337df}{get\+\_\+box}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the bounding box of the area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_area_af63b5dd77d937cc154bc4740f7a66c62}{set\+\_\+box}} (const double min, const double max)
+\begin{DoxyCompactList}\small\item\em Setter for the bounding box of the area. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_area_a99282fbbf3ebf43f61c2e25148894dc3}{is\+\_\+inside}} (std\+::vector$<$ double $>$ x) const
+\begin{DoxyCompactList}\small\item\em Checks if a given point is inside the area. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing an area defined by a bounding box. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_area_a75d49a2424fb49eb7ac71ca232f7f2e1}\label{class_area_a75d49a2424fb49eb7ac71ca232f7f2e1} 
+\index{Area@{Area}!Area@{Area}}
+\index{Area@{Area}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{Area()}{Area()}}
+{\footnotesize\ttfamily Area\+::\+Area (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \&}]{box\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor initializing the area with a specified bounding box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em box\+\_\+} & Vector of pairs representing the bounding box in the format \{min, max\} for each dimension. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_area_afe3e87cd4c41bdb896b25bcfd5c337df}\label{class_area_afe3e87cd4c41bdb896b25bcfd5c337df} 
+\index{Area@{Area}!get\_box@{get\_box}}
+\index{get\_box@{get\_box}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{get\_box()}{get\_box()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ Area\+::get\+\_\+box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the bounding box of the area. 
+
+\begin{DoxyReturn}{Returns}
+Vector of pairs representing the bounding box in the format \{min, max\} for each dimension. 
+\end{DoxyReturn}
+\Hypertarget{class_area_a99282fbbf3ebf43f61c2e25148894dc3}\label{class_area_a99282fbbf3ebf43f61c2e25148894dc3} 
+\index{Area@{Area}!is\_inside@{is\_inside}}
+\index{is\_inside@{is\_inside}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{is\_inside()}{is\_inside()}}
+{\footnotesize\ttfamily bool Area\+::is\+\_\+inside (\begin{DoxyParamCaption}\item[{std\+::vector$<$ double $>$}]{x }\end{DoxyParamCaption}) const}
+
+
+
+Checks if a given point is inside the area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Vector representing the point coordinates in each dimension. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is inside the area, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_area_af63b5dd77d937cc154bc4740f7a66c62}\label{class_area_af63b5dd77d937cc154bc4740f7a66c62} 
+\index{Area@{Area}!set\_box@{set\_box}}
+\index{set\_box@{set\_box}!Area@{Area}}
+\doxysubsubsection{\texorpdfstring{set\_box()}{set\_box()}}
+{\footnotesize\ttfamily void Area\+::set\+\_\+box (\begin{DoxyParamCaption}\item[{const double}]{min,  }\item[{const double}]{max }\end{DoxyParamCaption})}
+
+
+
+Setter for the bounding box of the area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & Minimum value for the bounding box. \\
+\hline
+{\em max} & Maximum value for the bounding box. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Area.\+h\item 
+Area.\+cpp\end{DoxyCompactItemize}

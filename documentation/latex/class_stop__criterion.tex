@@ -1,0 +1,136 @@
+\doxysection{Stop\+\_\+criterion Class Reference}
+\hypertarget{class_stop__criterion}{}\label{class_stop__criterion}\index{Stop\_criterion@{Stop\_criterion}}
+
+
+Base class representing a stopping criterion for optimization methods.  
+
+
+
+
+{\ttfamily \#include $<$Stop\+\_\+criterion.\+h$>$}
+
+Inheritance diagram for Stop\+\_\+criterion\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.952381cm]{class_stop__criterion}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_stop__criterion_a2fffd40f0751e302229e3dd78436574c}\label{class_stop__criterion_a2fffd40f0751e302229e3dd78436574c} 
+{\bfseries Stop\+\_\+criterion} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the stopping criterion. \end{DoxyCompactList}\item 
+\Hypertarget{class_stop__criterion_a237246e0a353dd7cacc07e7ba52edada}\label{class_stop__criterion_a237246e0a353dd7cacc07e7ba52edada} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Stop\+\_\+criterion} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the stopping criterion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stop__criterion_af6eb6b2b09eea51f8095ad948178460d}{Stop\+\_\+criterion}} (double eps\+\_\+, int max\+\_\+num\+\_\+of\+\_\+iterations\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor for the stopping criterion with specified parameters. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_stop__criterion_ae0c471c4b28e5dcfd90819b93b9f8386}{get\+\_\+eps}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the tolerance parameter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stop__criterion_abe3a38e90f8929640a9606fb2b107065}{get\+\_\+max\+\_\+num\+\_\+of\+\_\+iterations}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the maximum number of iterations allowed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_stop__criterion_acdf1e34d4ef145bfc95ae38be9b33319}{termination}} (\mbox{\hyperlink{class_optimization__method}{Optimization\+\_\+method}} \texorpdfstring{$\ast$}{*}optimization\+\_\+method)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to check the termination condition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_stop__criterion_a3d03c7799af8c3e1580efb8e8f035cc4}{eps}}
+\item 
+int \mbox{\hyperlink{class_stop__criterion_a82d6875ad3519c1f71b2f985b6e68eea}{max\+\_\+num\+\_\+of\+\_\+iterations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing a stopping criterion for optimization methods. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_stop__criterion_af6eb6b2b09eea51f8095ad948178460d}\label{class_stop__criterion_af6eb6b2b09eea51f8095ad948178460d} 
+\index{Stop\_criterion@{Stop\_criterion}!Stop\_criterion@{Stop\_criterion}}
+\index{Stop\_criterion@{Stop\_criterion}!Stop\_criterion@{Stop\_criterion}}
+\doxysubsubsection{\texorpdfstring{Stop\_criterion()}{Stop\_criterion()}}
+{\footnotesize\ttfamily Stop\+\_\+criterion\+::\+Stop\+\_\+criterion (\begin{DoxyParamCaption}\item[{double}]{eps\+\_\+,  }\item[{int}]{max\+\_\+num\+\_\+of\+\_\+iterations\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Constructor for the stopping criterion with specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eps\+\_\+} & Tolerance value for termination conditions. \\
+\hline
+{\em max\+\_\+num\+\_\+of\+\_\+iterations\+\_\+} & Maximum number of iterations allowed. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stop__criterion_ae0c471c4b28e5dcfd90819b93b9f8386}\label{class_stop__criterion_ae0c471c4b28e5dcfd90819b93b9f8386} 
+\index{Stop\_criterion@{Stop\_criterion}!get\_eps@{get\_eps}}
+\index{get\_eps@{get\_eps}!Stop\_criterion@{Stop\_criterion}}
+\doxysubsubsection{\texorpdfstring{get\_eps()}{get\_eps()}}
+{\footnotesize\ttfamily double Stop\+\_\+criterion\+::get\+\_\+eps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the tolerance parameter. 
+
+\begin{DoxyReturn}{Returns}
+Tolerance value for termination conditions. 
+\end{DoxyReturn}
+\Hypertarget{class_stop__criterion_abe3a38e90f8929640a9606fb2b107065}\label{class_stop__criterion_abe3a38e90f8929640a9606fb2b107065} 
+\index{Stop\_criterion@{Stop\_criterion}!get\_max\_num\_of\_iterations@{get\_max\_num\_of\_iterations}}
+\index{get\_max\_num\_of\_iterations@{get\_max\_num\_of\_iterations}!Stop\_criterion@{Stop\_criterion}}
+\doxysubsubsection{\texorpdfstring{get\_max\_num\_of\_iterations()}{get\_max\_num\_of\_iterations()}}
+{\footnotesize\ttfamily int Stop\+\_\+criterion\+::get\+\_\+max\+\_\+num\+\_\+of\+\_\+iterations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter for the maximum number of iterations allowed. 
+
+\begin{DoxyReturn}{Returns}
+Maximum number of iterations allowed. 
+\end{DoxyReturn}
+\Hypertarget{class_stop__criterion_acdf1e34d4ef145bfc95ae38be9b33319}\label{class_stop__criterion_acdf1e34d4ef145bfc95ae38be9b33319} 
+\index{Stop\_criterion@{Stop\_criterion}!termination@{termination}}
+\index{termination@{termination}!Stop\_criterion@{Stop\_criterion}}
+\doxysubsubsection{\texorpdfstring{termination()}{termination()}}
+{\footnotesize\ttfamily virtual bool Stop\+\_\+criterion\+::termination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_optimization__method}{Optimization\+\_\+method}} \texorpdfstring{$\ast$}{*}}]{optimization\+\_\+method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to check the termination condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em optimization\+\_\+method} & Pointer to the optimization method using the stopping criterion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the termination condition is met, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_criterion__f__difference__min_a8e01c4196d72927362fdf9d2956b4aa3}{Criterion\+\_\+f\+\_\+difference\+\_\+min}}, \mbox{\hyperlink{class_criterion__max__iter_a8b409ad9deb40115a97812005ea7d52d}{Criterion\+\_\+max\+\_\+iter}}, \mbox{\hyperlink{class_criterion__num__iter__last__approx_a66dcb43119bad4f6cfff4d9688c347ea}{Criterion\+\_\+num\+\_\+iter\+\_\+last\+\_\+approx}}, \mbox{\hyperlink{class_criterion__grad__f_a5c945a087e80f39b00eeb560b7916778}{Criterion\+\_\+grad\+\_\+f}}, \mbox{\hyperlink{class_criterion__x__difference_a32f7b52b635bbccecc41032dfdb95322}{Criterion\+\_\+x\+\_\+difference}}, and \mbox{\hyperlink{class_criterion__f__difference_a1f83a8963b08de1bb990df5bed8b4262}{Criterion\+\_\+f\+\_\+difference}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_stop__criterion_a3d03c7799af8c3e1580efb8e8f035cc4}\label{class_stop__criterion_a3d03c7799af8c3e1580efb8e8f035cc4} 
+\index{Stop\_criterion@{Stop\_criterion}!eps@{eps}}
+\index{eps@{eps}!Stop\_criterion@{Stop\_criterion}}
+\doxysubsubsection{\texorpdfstring{eps}{eps}}
+{\footnotesize\ttfamily double Stop\+\_\+criterion\+::eps\hspace{0.3cm}{\ttfamily [protected]}}
+
+Tolerance value for termination conditions. \Hypertarget{class_stop__criterion_a82d6875ad3519c1f71b2f985b6e68eea}\label{class_stop__criterion_a82d6875ad3519c1f71b2f985b6e68eea} 
+\index{Stop\_criterion@{Stop\_criterion}!max\_num\_of\_iterations@{max\_num\_of\_iterations}}
+\index{max\_num\_of\_iterations@{max\_num\_of\_iterations}!Stop\_criterion@{Stop\_criterion}}
+\doxysubsubsection{\texorpdfstring{max\_num\_of\_iterations}{max\_num\_of\_iterations}}
+{\footnotesize\ttfamily int Stop\+\_\+criterion\+::max\+\_\+num\+\_\+of\+\_\+iterations\hspace{0.3cm}{\ttfamily [protected]}}
+
+Maximum number of iterations allowed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Stop\+\_\+criterion.\+h\item 
+Stop\+\_\+criterion.\+cpp\end{DoxyCompactItemize}

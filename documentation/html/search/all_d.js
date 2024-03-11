@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['termination_0',['termination',['../class_stop__criterion.html#acdf1e34d4ef145bfc95ae38be9b33319',1,'Stop_criterion::termination()'],['../class_criterion__f__difference__min.html#a8e01c4196d72927362fdf9d2956b4aa3',1,'Criterion_f_difference_min::termination()'],['../class_criterion__max__iter.html#a8b409ad9deb40115a97812005ea7d52d',1,'Criterion_max_iter::termination()'],['../class_criterion__num__iter__last__approx.html#a66dcb43119bad4f6cfff4d9688c347ea',1,'Criterion_num_iter_last_approx::termination()'],['../class_criterion__grad__f.html#a5c945a087e80f39b00eeb560b7916778',1,'Criterion_grad_f::termination()'],['../class_criterion__x__difference.html#a32f7b52b635bbccecc41032dfdb95322',1,'Criterion_x_difference::termination()'],['../class_criterion__f__difference.html#a1f83a8963b08de1bb990df5bed8b4262',1,'Criterion_f_difference::termination()']]]
+];

@@ -1,0 +1,100 @@
+\doxysection{Criterion\+\_\+max\+\_\+iter Class Reference}
+\hypertarget{class_criterion__max__iter}{}\label{class_criterion__max__iter}\index{Criterion\_max\_iter@{Criterion\_max\_iter}}
+
+
+Stopping criterion based on the maximum number of iterations.  
+
+
+
+
+{\ttfamily \#include $<$Stop\+\_\+criterion.\+h$>$}
+
+Inheritance diagram for Criterion\+\_\+max\+\_\+iter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_criterion__max__iter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_criterion__max__iter_a665905b0a5b239f32238f965c32ccab5}\label{class_criterion__max__iter_a665905b0a5b239f32238f965c32ccab5} 
+{\bfseries Criterion\+\_\+max\+\_\+iter} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the criterion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_criterion__max__iter_a5a83b4c420788a3b836d6751c7272581}{Criterion\+\_\+max\+\_\+iter}} (int max\+\_\+num\+\_\+of\+\_\+iterations\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor for the criterion with specified maximum number of iterations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_criterion__max__iter_a8b409ad9deb40115a97812005ea7d52d}{termination}} (\mbox{\hyperlink{class_optimization__method}{Optimization\+\_\+method}} \texorpdfstring{$\ast$}{*}optimization\+\_\+method) override
+\begin{DoxyCompactList}\small\item\em Checks the termination condition based on the maximum number of iterations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_stop__criterion}{Stop\+\_\+criterion}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Stop\+\_\+criterion} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the stopping criterion. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Stop\+\_\+criterion} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the stopping criterion. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stop__criterion_af6eb6b2b09eea51f8095ad948178460d}{Stop\+\_\+criterion}} (double eps\+\_\+, int max\+\_\+num\+\_\+of\+\_\+iterations\+\_\+)
+\begin{DoxyCompactList}\small\item\em Constructor for the stopping criterion with specified parameters. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_stop__criterion_ae0c471c4b28e5dcfd90819b93b9f8386}{get\+\_\+eps}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the tolerance parameter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_stop__criterion_abe3a38e90f8929640a9606fb2b107065}{get\+\_\+max\+\_\+num\+\_\+of\+\_\+iterations}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the maximum number of iterations allowed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_stop__criterion}{Stop\+\_\+criterion}}}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_stop__criterion_a3d03c7799af8c3e1580efb8e8f035cc4}{eps}}
+\item 
+int \mbox{\hyperlink{class_stop__criterion_a82d6875ad3519c1f71b2f985b6e68eea}{max\+\_\+num\+\_\+of\+\_\+iterations}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stopping criterion based on the maximum number of iterations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_criterion__max__iter_a5a83b4c420788a3b836d6751c7272581}\label{class_criterion__max__iter_a5a83b4c420788a3b836d6751c7272581} 
+\index{Criterion\_max\_iter@{Criterion\_max\_iter}!Criterion\_max\_iter@{Criterion\_max\_iter}}
+\index{Criterion\_max\_iter@{Criterion\_max\_iter}!Criterion\_max\_iter@{Criterion\_max\_iter}}
+\doxysubsubsection{\texorpdfstring{Criterion\_max\_iter()}{Criterion\_max\_iter()}}
+{\footnotesize\ttfamily Criterion\+\_\+max\+\_\+iter\+::\+Criterion\+\_\+max\+\_\+iter (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+num\+\_\+of\+\_\+iterations\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the criterion with specified maximum number of iterations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+num\+\_\+of\+\_\+iterations\+\_\+} & Maximum number of iterations allowed. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_criterion__max__iter_a8b409ad9deb40115a97812005ea7d52d}\label{class_criterion__max__iter_a8b409ad9deb40115a97812005ea7d52d} 
+\index{Criterion\_max\_iter@{Criterion\_max\_iter}!termination@{termination}}
+\index{termination@{termination}!Criterion\_max\_iter@{Criterion\_max\_iter}}
+\doxysubsubsection{\texorpdfstring{termination()}{termination()}}
+{\footnotesize\ttfamily bool Criterion\+\_\+max\+\_\+iter\+::termination (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_optimization__method}{Optimization\+\_\+method}} \texorpdfstring{$\ast$}{*}}]{optimization\+\_\+method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks the termination condition based on the maximum number of iterations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em optimization\+\_\+method} & Pointer to the optimization method using the stopping criterion. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the termination condition is met, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_stop__criterion_acdf1e34d4ef145bfc95ae38be9b33319}{Stop\+\_\+criterion}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Stop\+\_\+criterion.\+h\item 
+Stop\+\_\+criterion.\+cpp\end{DoxyCompactItemize}

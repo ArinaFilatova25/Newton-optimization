@@ -1,0 +1,34 @@
+\doxysection{Random\+\_\+search.\+h}
+\hypertarget{_random__search_8h_source}{}\label{_random__search_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Function.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Area.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Stop\_criterion.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Optimization\_method.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_random__search}{Random\_search}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_optimization__method}{Optimization\_method}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ seed;\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::default\_random\_engine\ generator;\ }
+\DoxyCodeLine{00020\ \ \ \ \ std::uniform\_real\_distribution<double>\ distribution;\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{double}\ p;\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{double}\ delta;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{double}\ curr\_delta;\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ alpha;\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_random__search_a8a050812851cf02b96da75f01f2964ec}{Random\_search}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{class_random__search_a8a050812851cf02b96da75f01f2964ec}{Random\_search}}(\mbox{\hyperlink{class_function}{Function}}*\ \mbox{\hyperlink{class_optimization__method_aa7a333dc2fadf8de070dad4c665f19fb}{function}},\ std::vector<double>\ x\_0,\ \mbox{\hyperlink{class_area}{Area}}\ \mbox{\hyperlink{class_optimization__method_a822bb7b7bcd27fbc4062a57bb803f5e5}{area}},}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stop__criterion}{Stop\_criterion}}*\ \mbox{\hyperlink{class_optimization__method_a10ac5d02c8ebe2e107eeb9ea7e576485}{stop\_criterion}},\ \textcolor{keywordtype}{double}\ p\_\ =\ 0.5,\ \textcolor{keywordtype}{double}\ delta\_\ =\ 1,\ \textcolor{keywordtype}{double}\ alpha\_\ =\ 1);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_random__search_af015d9b8a41463dedbc6d6c79cd30f1b}{optimization}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ \};}
+
+\end{DoxyCode}
